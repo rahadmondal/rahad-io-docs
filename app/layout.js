@@ -10,7 +10,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  getDocument();
+  const allDocs = getDocument();
+
   return (
     <html lang="en">
       <body className={`antialiased`}>
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
           <div className="max-w-[1440px] mx-auto flex w-full">
             {/* 2. Left Sidebar - Hidden on mobile, sticky on desktop */}
             <aside className="hidden lg:block w-64 shrink-0 border-r border-slate-200 h-[calc(100vh-4rem)] sticky top-16 overflow-y-auto py-6 pl-4 pr-2">
-              <LeftSidebar />
+              <LeftSidebar docs={allDocs} />
             </aside>
 
             {/* 3. Main Content - Takes remaining space */}

@@ -1,7 +1,7 @@
 // components/LeftSidebar.jsx
 import React from "react";
 
-const LeftSidebar = () => {
+const LeftSidebar = ({ docs }) => {
   const links = [
     {
       title: "Getting Started",
@@ -10,6 +10,12 @@ const LeftSidebar = () => {
     { title: "Components", items: ["Button", "Card", "Modal", "Navbar"] },
     { title: "Utilities", items: ["Colors", "Spacing", "Typography"] },
   ];
+
+  const groupObject = Object.groupBy(docs, (item) => {
+    return (item.module || item.Module).trim();
+  });
+
+  console.log(groupObject);
 
   return (
     <nav className="space-y-8">
