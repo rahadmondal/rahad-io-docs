@@ -1,4 +1,5 @@
 // components/Navbar.jsx
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -6,10 +7,13 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
       <div className="max-w-[1440px] mx-auto flex h-16 items-center justify-between px-4 md:px-8">
         {/* Logo Section */}
-        <div className="flex items-center gap-2 font-bold text-xl text-indigo-600 cursor-pointer">
+        <Link
+          href={"/"}
+          className="flex items-center gap-2 font-bold text-xl text-indigo-600 cursor-pointer"
+        >
           <span className="bg-indigo-600 text-white p-1 rounded">JS</span>
           <span>Docs</span>
-        </div>
+        </Link>
 
         {/* Search Bar Section */}
         <div className="flex-1 max-w-md mx-4 hidden md:block">
