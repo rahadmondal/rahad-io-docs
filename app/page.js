@@ -17,7 +17,7 @@ import CountriButionSection from "@/component/Home/CountriButionSection";
 export default function Home() {
   return (
     <div>
-      <div className="min-h-screen bg-white dark:bg-[#09090b] text-slate-900 dark:text-slate-50 font-sans selection:bg-indigo-500/30">
+      <div className="min-h-screen bg-white dark:bg-navy-dark text-slate-900 dark:text-slate-50 font-sans selection:bg-indigo-500/30">
         {/* --- Background Grid Pattern --- */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
@@ -97,12 +97,7 @@ export default function Home() {
         {/* --- Contribution Section --- */}
         <CountriButionSection />
         {/* --- Footer --- */}
-        <footer className="py-12 text-center border-t border-slate-200 dark:border-white/10 bg-white dark:bg-[#09090b]">
-          <p className="text-slate-400 text-sm">
-            &copy; {new Date().getFullYear()} Rahad Io Docs. Built for the
-            Community.
-          </p>
-        </footer>
+    
       </div>
     </div>
   );

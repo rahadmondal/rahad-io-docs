@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CountriButionSection = () => {
   return (
-    <section className="py-24 border-t border-slate-200 dark:border-white/10 relative z-10 overflow-hidden bg-slate-50 dark:bg-[#09090b]">
+    <section className="py-24 border-t border-slate-200 dark:border-white/10 relative z-10 overflow-hidden bg-slate-50 dark:bg-extra-navy-dark">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         {/* Text Content */}
         <div>
@@ -22,7 +22,7 @@ const CountriButionSection = () => {
 
           <div className="flex gap-4">
             <Link
-              href="https://github.com"
+              href="https://github.com/rahadmondal/rahad-io-docs/fork"
               className="px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-black rounded-lg font-bold hover:shadow-lg transition"
             >
               Fork Repository
@@ -34,7 +34,7 @@ const CountriButionSection = () => {
         <div className="perspective-1000">
           <div
             className="
-    bg-slate-100 dark:bg-slate-900
+    bg-slate-100 dark:bg-navy-dark
     border border-slate-300 dark:border-slate-700
     rounded-2xl p-6 shadow-2xl transform rotate-2 hover:rotate-0 
     transition duration-500 ease-out origin-center

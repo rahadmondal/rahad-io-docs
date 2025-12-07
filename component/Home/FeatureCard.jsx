@@ -16,7 +16,7 @@ export default function FeatureCard() {
               key={idx}
               className={`${
                 card.colSpan || ""
-              } p-8 rounded-2xl bg-white dark:bg-[#121214] 
+              } p-8 rounded-2xl bg-white dark:bg-extra-navy-dark 
                           border border-slate-200 dark:border-white/10 
                           hover:border-indigo-500/50 transition group`}
             >

@@ -1,9 +1,6 @@
-import RightSidebar from "@/component/RightSidebar";
-import "./globals.css";
-import { getDocument } from "@/lib/doc";
-import LeftSidebar from "@/component/LeftSidebar";
-import Navbar from "@/component/Navbar";
+import Footer from "@/component/common/Footer";
 import { ThemeProvider } from "@/component/common/ThemeProvider";
+import "./globals.css";
 
 export const metadata = {
   title: "Rahad-IO-Docs , A documentation webside",
@@ -14,7 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
