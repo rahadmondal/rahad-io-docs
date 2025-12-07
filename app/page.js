@@ -13,6 +13,7 @@ import {
 import HomePageNavBar from "@/component/Home/HomePageNavBar";
 import FeatureCard from "@/component/Home/FeatureCard";
 import CountriButionSection from "@/component/Home/CountriButionSection";
+import Button from "@/component/common/Button";
 
 export default function Home() {
   return (
@@ -47,18 +48,12 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <Link
-              href="/docs"
-              className="h-12 px-8 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold flex items-center justify-center gap-2 transition shadow-lg shadow-indigo-500/20"
-            >
+            <Button href="/docs">
               Start Reading <ArrowRight size={18} />
-            </Link>
-            <Link
-              href="https://github.com"
-              className="h-12 px-8 rounded-lg bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/10 text-slate-900 dark:text-white font-medium flex items-center justify-center gap-2 transition"
-            >
+            </Button>
+            <Button variant="secondary" href="https://github.com">
               <Github size={18} /> Star on GitHub
-            </Link>
+            </Button>
           </div>
 
           {/* --- Stats Moved Up (Here) --- */}
@@ -97,7 +92,6 @@ export default function Home() {
         {/* --- Contribution Section --- */}
         <CountriButionSection />
         {/* --- Footer --- */}
-    
       </div>
     </div>
   );

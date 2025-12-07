@@ -4,4 +4,6 @@
 @theme {
   --color-navy-dark: #0b1121;
   --color-extra-navy-dark: #0f172a;
+  --color-primary: #4f46e5;
+  --color-primary-hover: hsl(248 59% 45%);
 }
