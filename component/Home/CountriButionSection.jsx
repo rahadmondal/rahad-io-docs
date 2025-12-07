@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { Github } from "lucide-react";
-import Link from "next/link";
+import Button from "../common/Button";
 
 const CountriButionSection = () => {
   return (
@@ -21,12 +21,9 @@ const CountriButionSection = () => {
           </p>
 
           <div className="flex gap-4">
-            <Link
-              href="https://github.com/rahadmondal/rahad-io-docs/fork"
-              className="px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-black rounded-lg font-bold hover:shadow-lg transition"
-            >
+            <Button href="https://github.com/rahadmondal/rahad-io-docs/fork">
               Fork Repository
-            </Link>
+            </Button>
           </div>
         </div>
 

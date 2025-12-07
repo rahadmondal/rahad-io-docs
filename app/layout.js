@@ -1,3 +1,4 @@
+import BackGroundEffect from "@/component/common/BackGroundEffect";
 import Footer from "@/component/common/Footer";
 import { ThemeProvider } from "@/component/common/ThemeProvider";
 import "./globals.css";
@@ -12,6 +13,8 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased`}>
         <ThemeProvider>
+          {/* --- Background Grid Pattern --- */}
+          <BackGroundEffect />
           {children}
           <Footer />
         </ThemeProvider>
