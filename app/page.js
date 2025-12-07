@@ -1,19 +1,9 @@
-import Link from "next/link";
-import {
-  Github,
-  ArrowRight,
-  Book,
-  Shield,
-  Zap,
-  Layout,
-  Star,
-  GitFork,
-  Users,
-} from "lucide-react";
-import HomePageNavBar from "@/component/Home/HomePageNavBar";
-import FeatureCard from "@/component/Home/FeatureCard";
-import CountriButionSection from "@/component/Home/CountriButionSection";
 import Button from "@/component/common/Button";
+import CountriButionSection from "@/component/Home/CountriButionSection";
+import FeatureCard from "@/component/Home/FeatureCard";
+import GitHubStatus from "@/component/Home/GitHubStatus";
+import HomePageNavBar from "@/component/Home/HomePageNavBar";
+import { ArrowRight, Github } from "lucide-react";
 
 export default function Home() {
   return (
@@ -51,39 +41,16 @@ export default function Home() {
             <Button href="/docs">
               Start Reading <ArrowRight size={18} />
             </Button>
-            <Button variant="secondary" href="https://github.com">
+            <Button
+              variant="secondary"
+              href="https://github.com/rahadmondal/rahad-io-docs"
+            >
               <Github size={18} /> Star on GitHub
             </Button>
           </div>
 
           {/* --- Stats Moved Up (Here) --- */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto border-t border-slate-200 dark:border-white/10 pt-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-2xl font-bold text-slate-900 dark:text-white">
-                <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />{" "}
-                1.2k
-              </div>
-              <div className="text-xs text-slate-500 uppercase font-semibold mt-1">
-                Stars
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-2xl font-bold text-slate-900 dark:text-white">
-                <GitFork className="w-5 h-5 text-purple-500" /> 320
-              </div>
-              <div className="text-xs text-slate-500 uppercase font-semibold mt-1">
-                Forks
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-2xl font-bold text-slate-900 dark:text-white">
-                <Users className="w-5 h-5 text-blue-500" /> 45+
-              </div>
-              <div className="text-xs text-slate-500 uppercase font-semibold mt-1">
-                Contributors
-              </div>
-            </div>
-          </div>
+          <GitHubStatus />
         </section>
 
         {/* --- Features / Bento Grid --- */}
@@ -91,7 +58,6 @@ export default function Home() {
 
         {/* --- Contribution Section --- */}
         <CountriButionSection />
-        {/* --- Footer --- */}
       </div>
     </div>
   );
