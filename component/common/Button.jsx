@@ -25,7 +25,7 @@ const Button = ({
     variants[variant] || variants.primary
   } ${className}`;
 
-  // ৪. যদি 'href' থাকে তবে এটা Link হবে, না থাকলে সাধারণ button
+ 
   if (href) {
     return (
       <Link href={href} className={finalClass} {...props}>
