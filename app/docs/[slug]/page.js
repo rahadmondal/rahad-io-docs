@@ -62,7 +62,7 @@ export default async function DocPage({ params }) {
           {doc.title}
         </h1>
 
-        
+
 
         <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
           {doc.description}
@@ -144,7 +144,7 @@ export default function Hello() {
             </div>
           </Link>
 
-          {/* Next Link */}
+          {/* Next Link buton*/}
           <Link
             href="#"
             className="group p-4 rounded-xl border border-slate-200 dark:border-white/10 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-white/5 transition-all text-right"
