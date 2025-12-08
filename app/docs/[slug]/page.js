@@ -62,6 +62,8 @@ export default async function DocPage({ params }) {
           {doc.title}
         </h1>
 
+        
+
         <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
           {doc.description}
         </p>
