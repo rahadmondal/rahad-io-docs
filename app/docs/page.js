@@ -126,7 +126,7 @@ export default function DocsPage() {
 
           {/* Search Input */}
           <div className="max-w-2xl mx-auto relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+            <div className="absolute -inset-0.5 bg-linear-to-r from-primary to-secondary rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
             <div className="relative flex items-center bg-white dark:bg-[#0f1629] border border-slate-200 dark:border-white/10 rounded-xl p-1 shadow-sm">
               <Search className="ml-4 w-5 h-5 text-slate-400" />
               <input
@@ -205,7 +205,7 @@ export default function DocsPage() {
         )}
 
         {/* --- Request Section --- */}
-        <div className="mt-20 p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 text-center">
+        <div className="mt-20 p-8 rounded-2xl bg-linear-to-r from-primary/10 to-secondary/10 border border-primary/20 text-center">
           <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
             কাঙ্ক্ষিত ডকুমেন্ট খুঁজে পাচ্ছেন না?
           </h3>
