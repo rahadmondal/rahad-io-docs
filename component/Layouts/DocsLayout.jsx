@@ -4,14 +4,13 @@ import LeftSidebar from "../LeftSidebar";
 import Navbar from "../Navbar";
 import { getDocument } from "@/lib/doc";
 
-const DocsLayout = ({ children }) => {
-  const allDocs = getDocument();
+const DocsLayout = ({ children, slug }) => {
+  const allDocs = getDocument(slug);
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Navbar */}
       <Navbar />
-
       {/* Main Container */}
       <div className="max-w-[1440px] mx-auto flex w-full">
         {/* Left Sidebar */}
