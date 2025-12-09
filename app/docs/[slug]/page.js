@@ -1,9 +1,5 @@
-import React from "react";
 
-const Docspage = async ({ params }) => {
-  const Pageparams = await params;
-
-  console.log(Pageparams);
+const Docspage = () => {
   return <div>content</div>;
 };
 
