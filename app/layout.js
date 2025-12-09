@@ -2,6 +2,7 @@ import BackGroundEffect from "@/component/common/BackGroundEffect";
 import Footer from "@/component/common/Footer";
 import { ThemeProvider } from "@/component/common/ThemeProvider";
 import "./globals.css";
+import HomePageNavBar from "@/component/Home/HomePageNavBar";
 
 export const metadata = {
   title: "Rahad-IO-Docs , A documentation webside",

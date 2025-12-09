@@ -1,13 +1,13 @@
 export const HomePageCardData = [
   {
     type: "main",
-    icon: "Zap",
-    bg: "bg-indigo-100 dark:bg-indigo-900/30",
-    textColor: "text-indigo-600",
-    title: "Next.js 14 & React",
-    desc: "অ্যাপ রাউটার, সার্ভার কম্পোনেন্ট এবং মডার্ন ওয়েব ডেভেলপমেন্টের পূর্ণাঙ্গ গাইড। একদম প্রোডাকশন-লেভেল কোড এক্সাম্পল সহ।",
-    link: "/docs/nextjs",
-    linkText: "Learn Next.js",
+    icon: "Book",
+    bg: "bg-green-100 dark:bg-green-900/30",
+    textColor: "text-green-600",
+    title: "JavaScript Essentials",
+    desc: "JS এর বেসিক থেকে অ্যাডভান্স কনসেপ্ট পর্যন্ত সবকিছু সহজভাবে বোঝানো হয়েছে।",
+    link: "/docs/javascript",
+    linkText: "Learn JavaScript",
     colSpan: "md:col-span-2",
   },
   {
