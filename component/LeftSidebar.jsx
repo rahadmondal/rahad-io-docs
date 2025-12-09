@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-const LeftSidebar = ({ docs, slug }) => {
-  // Note: Object.groupBy is a newer JS feature (ES2024).
-  // Make sure your Node version supports it (v21+), otherwise use lodash or a polyfill.
+const LeftSidebar = ({ docs, params }) => {
   const groupObject = Object.groupBy(docs, (item) => {
     return (item.module || item.Module).trim();
   });
+
+  console.log(params);
 
   const moduleKeys = Object.keys(groupObject);
 
@@ -24,13 +24,15 @@ const LeftSidebar = ({ docs, slug }) => {
               {groupObject[module].map((item, index) => {
                 // Active State Logic (Example)
                 // বাস্তবে এখানে আপনাকে চেক করতে হবে বর্তমান URL item.id এর সাথে মিলছে কিনা
-                const isActive = item.title === "Installation";
+                const isActive = item.id === params.id;
 
                 return (
                   <li key={index}>
                     <Link
                       // slug যদি undefined থাকে তবে যাতে ভেঙে না যায় তাই সেফটি চেক
-                      href={`/docs/${slug ? slug + "/" : ""}${item.id}`}
+                      href={`/docs/${params.slug ? params.slug + "/" : ""}${
+                        item.id
+                      }`}
                       className={`block px-2 py-1.5 text-sm rounded-md transition-all duration-200 ${
                         isActive
                           ? "bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium"
