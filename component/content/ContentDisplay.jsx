@@ -5,11 +5,7 @@ import { Calendar, User, Clock } from "lucide-react";
 
 const ContentDisplay = async ({ params }) => {
   const { id, slug } = params;
-
-  // getContent ফাংশন থেকে contentHtml এর পাশাপাশি
-  // title, date, author, category এগুলোও রিটার্ন পাওয়া উচিত
   const content = await getContent(id, slug);
-
   return (
     <article className="max-w-none w-full pb-20">
       {/* --- 1. Document Header (Title & Meta) --- */}
