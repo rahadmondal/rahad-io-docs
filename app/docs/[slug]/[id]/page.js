@@ -3,8 +3,7 @@ import React from "react";
 
 const Contentpage = async ({ params }) => {
   const getParams = await params;
-  const { id } = getParams;
-  return <ContentDisplay id={id} />;
+  return <ContentDisplay params={getParams} />;
 };
 
 export default Contentpage;
