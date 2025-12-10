@@ -1,13 +1,13 @@
+"use client";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import React from "react";
 
 const LeftSidebar = ({ docs, params }) => {
   const groupObject = Object.groupBy(docs, (item) => {
     return (item.module || item.Module).trim();
   });
-
-  console.log(params);
-
+  const getParams = useParams();
   const moduleKeys = Object.keys(groupObject);
 
   return (
@@ -24,7 +24,7 @@ const LeftSidebar = ({ docs, params }) => {
               {groupObject[module].map((item, index) => {
                 // Active State Logic (Example)
                 // বাস্তবে এখানে আপনাকে চেক করতে হবে বর্তমান URL item.id এর সাথে মিলছে কিনা
-                const isActive = item.id === params.id;
+                const isActive = item.id === getParams.id[0];
 
                 return (
                   <li key={index}>

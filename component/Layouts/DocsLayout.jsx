@@ -5,7 +5,7 @@ import Navbar from "../Navbar";
 import { getDocument } from "@/lib/doc";
 
 const DocsLayout = ({ children, params }) => {
-  const allDocs = getDocument(params.slug);
+  const allDocs = getDocument(params?.slug);
 
   return (
     <div className="min-h-screen bg-white dark:bg-navy-dark text-slate-900 dark:text-slate-50 transition-colors duration-300">
