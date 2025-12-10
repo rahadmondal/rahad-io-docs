@@ -22,14 +22,11 @@ const LeftSidebar = ({ docs, params }) => {
           {groupObject[module] && (
             <ul className="space-y-1">
               {groupObject[module].map((item, index) => {
-                // Active State Logic (Example)
-                // বাস্তবে এখানে আপনাকে চেক করতে হবে বর্তমান URL item.id এর সাথে মিলছে কিনা
                 const isActive = item.id === getParams.id[0];
 
                 return (
                   <li key={index}>
                     <Link
-                      // slug যদি undefined থাকে তবে যাতে ভেঙে না যায় তাই সেফটি চেক
                       href={`/docs/${params.slug ? params.slug + "/" : ""}${
                         item.id
                       }`}
