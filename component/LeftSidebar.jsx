@@ -22,7 +22,7 @@ const LeftSidebar = ({ docs, params }) => {
           {groupObject[module] && (
             <ul className="space-y-1">
               {groupObject[module].map((item, index) => {
-                const isActive = item.id === getParams.id[0];
+                const isActive = item.id === getParams?.id;
 
                 return (
                   <li key={index}>
