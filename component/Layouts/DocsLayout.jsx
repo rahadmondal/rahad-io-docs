@@ -2,12 +2,11 @@ import React from "react";
 import RightSidebar from "../RightSidebar";
 import LeftSidebar from "../LeftSidebar";
 import Navbar from "../Navbar";
-import { getDocument } from "@/lib/doc";
+import { getContent, getDocument } from "@/lib/doc";
 
-const DocsLayout = ({ children, params }) => {
+const DocsLayout = async ({ children, params }) => {
   const allDocs = getDocument(params?.slug);
-
-  console.log(params);
+  const { headings } = await getContent(params?.id, params?.slug);
   return (
     <div className="min-h-screen bg-white dark:bg-navy-dark text-slate-900 dark:text-slate-50 transition-colors duration-300">
       {/* Navbar */}
@@ -24,7 +23,7 @@ const DocsLayout = ({ children, params }) => {
 
         {/* --- Right Sidebar --- */}
         <aside className="hidden xl:block w-64 shrink-0 h-[calc(100vh-4rem)] border-l border-slate-200 dark:border-white/10 sticky top-16 py-8 pr-4 pl-4">
-          <RightSidebar params={params} />
+          <RightSidebar headings={headings} />
         </aside>
       </div>
     </div>

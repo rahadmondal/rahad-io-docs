@@ -1,10 +1,8 @@
 import { getContent } from "@/lib/doc";
+import Link from "next/link";
 import React from "react";
 
-const RightSidebar = ({ params }) => {
-  // console.log(params);
-  const { id, slug } = params;
-  // const heading = getContent(id, slug);
+const RightSidebar = async ({ headings }) => {
   return (
     <div className="space-y-4">
       {/* Title */}
@@ -14,17 +12,27 @@ const RightSidebar = ({ params }) => {
 
       <ul className="space-y-3 text-sm">
         {/* Inactive Link Example */}
-        <li>
+        {headings.map((heading) => (
+          <li key={heading.id}>
+            <Link
+              href={`#${heading.id}`}
+              className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors block"
+            >
+              {heading.text}
+            </Link>
+          </li>
+        ))}
+        {/* <li>
           <a
             href="#quick-start"
             className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors block"
           >
             Quick Start
           </a>
-        </li>
+        </li> */}
 
         {/* Active Link Example */}
-        <li>
+        {/* <li>
           <a
             href="#requirements"
             className="font-medium block border-l-2 pl-3 -ml-3 transition-colors
@@ -33,10 +41,10 @@ const RightSidebar = ({ params }) => {
           >
             Requirements
           </a>
-        </li>
+        </li> */}
 
         {/* More Inactive Links */}
-        <li>
+        {/* <li>
           <a
             href="#configuration"
             className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors block"
@@ -51,7 +59,7 @@ const RightSidebar = ({ params }) => {
           >
             Next Steps
           </a>
-        </li>
+        </li> */}
       </ul>
 
       {/* Community / Help Box */}
