@@ -1,6 +1,10 @@
+import { getContent } from "@/lib/doc";
 import React from "react";
 
-const RightSidebar = () => {
+const RightSidebar = ({ params }) => {
+  // console.log(params);
+  const { id, slug } = params;
+  // const heading = getContent(id, slug);
   return (
     <div className="space-y-4">
       {/* Title */}
