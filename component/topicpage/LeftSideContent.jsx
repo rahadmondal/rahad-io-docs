@@ -5,6 +5,7 @@ const LeftSideContent = ({ info, firstDocs, slug }) => {
   return (
     <div className="lg:col-span-2 space-y-8">
       {/* Description Card */}
+      
       <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm transition-colors duration-300">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">
           কোর্স সম্পর্কে কিছু কথা
