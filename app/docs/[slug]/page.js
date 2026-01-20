@@ -76,7 +76,7 @@ const Topicpage = async ({ params }) => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* --- LEFT COLUMN (Main Content) --- */}
             <LeftSideContent info={info} firstDocs={firstDocs} slug={slug} />
-            {/* --- RIGHT COLUMN (Sidebar / Meta Info) --- */}
+            {/* --- RIGHT COLUMN --- */}
             <RightSideMetaData allDocs={allDocs} info={info} />
           </div>
         </div>
