@@ -1,5 +1,6 @@
-import { Link } from "lucide-react";
+
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const RightSideMetaData = ({ allDocs, info }) => {
@@ -59,7 +60,7 @@ const RightSideMetaData = ({ allDocs, info }) => {
           {info.author.role}
         </p>
         <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-          "{info.author.bio}"
+          &quot;{info.author.bio}&quot;
         </p>
 
         <div className="mt-4 pt-4 border-t dark:border-gray-700 flex justify-center space-x-3">
