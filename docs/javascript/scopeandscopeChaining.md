@@ -1,5 +1,5 @@
 ---
-title: "Scope & Scope Chaining"
+title: "scope & scope Chaining"
 parent: "Deep Dive into Functions & Objects"
 order: 10
 module: "Deep Dive into Functions & Objects"
