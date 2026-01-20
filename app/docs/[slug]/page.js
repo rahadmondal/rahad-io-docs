@@ -1,6 +1,6 @@
 import { getDocument } from "@/lib/doc";
 import Link from "next/link";
-import Image from "next/image"; // ইমেজ ব্যবহারের জন্য
+import Image from "next/image";
 
 // ১. পেজের ডাটা কনফিগারেশন (আপনার প্রয়োজন মতো বাংলা টেক্সট বসিয়ে নিন)
 const topicData = {
@@ -12,15 +12,17 @@ const topicData = {
     আমরা এখানে রিয়েল-লাইফ প্রজেক্ট এবং ইন্টারভিউ প্রশ্ন নিয়েও আলোচনা করব। আপনি যদি ওয়েব ডেভেলপমেন্টে ক্যারিয়ার গড়তে চান, তবে এই গাইডটি আপনার জন্য।`,
 
     author: {
-      name: "আপনার নাম",
+      name: "MD A Rahad Mondal",
       role: "Lead Developer & Instructor",
       bio: "আমি গত ৫ বছর ধরে ফুল স্ট্যাক ডেভেলপমেন্ট করছি। আমার লক্ষ্য হলো জটিল বিষয়গুলোকে সহজ বাংলায় সবার কাছে পৌঁছে দেওয়া।",
-      avatar: "/author-placeholder.jpg", // public ফোল্ডারে ইমেজ রাখতে হবে
+      avatar: "/assets/authors/rahad-mondal-avatar.jpeg",
     },
 
     reference: {
-      source: "Sumit Saha & MDN",
-      note: "এই ডকুমেন্টেশনটি তৈরি করতে আমরা MDN Web Docs এবং সুমিত সাহা ভাইয়ের টিউটোরিয়াল থেকে অনুপ্রেরণা নিয়েছি। বিশেষ কৃতজ্ঞতা তাদের প্রতি।",
+      source: "tapaScript by Tapas Adhikary",
+      sourcesLink:
+        "https://youtube.com/playlist?list=PLIJrr73KDmRw2Fwwjt6cPC_tk5vcSICCu&si=DKsE-XOKX6pxQjTU",
+      note: "এই ডকুমেন্টেশনটি তৈরি করতে Tapas Adhikary ভাইয়ের টিউটোরিয়াল থেকে অনুপ্রেরণা নিয়েছি। বিশেষ কৃতজ্ঞতা তাদের প্রতি।",
     },
 
     estimatedHours: "১৫+ ঘণ্টা",
@@ -111,9 +113,13 @@ const Topicpage = async ({ params }) => {
                 💡 কৃতজ্ঞতা ও রেফারেন্স
               </h3>
               <p className="text-blue-800/80 mb-2">{info.reference.note}</p>
-              <p className="text-sm font-bold text-blue-600">
+              <Link
+                href={info.reference.sourcesLink}
+                target="blank"
+                className="text-sm font-bold text-blue-600"
+              >
                 Source: {info.reference.source}
-              </p>
+              </Link>
             </div>
           </div>
 
@@ -155,8 +161,12 @@ const Topicpage = async ({ params }) => {
             {/* Author Profile Card */}
             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center">
               <div className="w-20 h-20 mx-auto bg-gray-200 rounded-full mb-4 overflow-hidden relative">
-                {/* ইমেজ না থাকলে টেক্সট দেখাবে, থাকলে নিচের লাইন আনকমেন্ট করুন */}
-                {/* <Image src={info.author.avatar} alt="Author" fill className="object-cover" /> */}
+                <Image
+                  src={info.author.avatar}
+                  alt="Author"
+                  fill
+                  className="object-cover"
+                />
                 <span className="flex items-center justify-center h-full text-2xl">
                   👨‍💻
                 </span>
