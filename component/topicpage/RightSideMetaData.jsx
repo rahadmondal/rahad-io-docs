@@ -34,6 +34,7 @@ const RightSideMetaData = ({ allDocs, info }) => {
           </div>
           <div className="flex justify-between items-center">
             <span className="text-gray-500 dark:text-gray-400">
+                
               Last Updated
             </span>
             <span className="font-bold text-gray-900 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
